@@ -1,10 +1,3 @@
-✅ **Below is the COMPLETE, FINAL `README.md` file**
-✅ **Copy everything exactly as it is and paste into `README.md`**
-✅ This **perfectly matches your Python FastAPI + SQLModel + SQLite project**
-
----
-
-```md
 # 📑 Bookmark Manager REST API
 
 A simple RESTful API built using **Python, FastAPI, SQLModel, and SQLite** for managing personal bookmarks.  
@@ -35,14 +28,12 @@ This API implements full CRUD (Create, Read, Update, Delete) operations on a sin
 
 ## 📂 Project Structure
 
-```
 
 project-folder/
 ├── main.py
 ├── bookmarks.db
 └── README.md
 
-````
 
 > `bookmarks.db` is automatically created when the server starts.
 
@@ -89,13 +80,12 @@ FastAPI automatically generates interactive documentation:
 
 Each bookmark contains the following fields:
 
-```text
+
 id          - Integer (Primary Key, Auto-generated)
 url         - String (Required, must start with http:// or https://)
 title       - String (Required, cannot be empty)
 description - String (Optional)
 created_at  - Datetime (Auto-generated)
-```
 
 ---
 
