@@ -61,6 +61,13 @@ def read_bookmark(id: int):
 # 4. Update Bookmark
 @app.put("/bookmarks/{id}", response_model=Bookmark, status_code=status.HTTP_200_OK)
 def update_bookmark(id: int, bookmark_update: Bookmark):
+    # --- ADDED VALIDATION HERE ---
+    if not bookmark_update.title.strip():
+        raise HTTPException(status_code=400, detail="Title cannot be empty")
+    if not (bookmark_update.url.startswith("http://") or bookmark_update.url.startswith("https://")):
+         raise HTTPException(status_code=400, detail="Invalid URL format")
+    # -----------------------------
+
     with Session(engine) as session:
         db_bookmark = session.get(Bookmark, id)
         if not db_bookmark:

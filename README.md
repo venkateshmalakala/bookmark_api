@@ -30,11 +30,9 @@ This API implements full CRUD (Create, Read, Update, Delete) operations on a sin
 
 
 project-folder/
-
 ├── main.py
-
-├── bookmarks.db
-
+├── bookmarks.db       
+├── requirements.txt
 └── README.md
 
 
